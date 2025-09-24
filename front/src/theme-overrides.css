@@ -1,0 +1,577 @@
+/* Overrides para aplicar temas en componentes existentes (NO en login) */
+
+/* Solo aplicar estos estilos cuando NO sea una página de login */
+body:not(.login-page) .text-gray-900 { color: var(--text-primary) !important; }
+body:not(.login-page) .text-gray-800 { color: var(--text-primary) !important; }
+body:not(.login-page) .text-gray-700 { color: var(--text-primary) !important; }
+body:not(.login-page) .text-gray-600 { color: var(--text-secondary) !important; }
+body:not(.login-page) .text-gray-500 { color: var(--text-secondary) !important; }
+body:not(.login-page) .text-gray-400 { color: var(--text-accent) !important; }
+
+/* Asegurar texto blanco visible en cards oscuras */
+body:not(.login-page) .text-white { 
+  color: #ffffff !important; 
+}
+
+/* Forzar texto visible en cards y contenedores */
+body:not(.login-page) .card,
+body:not(.login-page) .card-modern,
+body:not(.login-page) .rounded-xl,
+body:not(.login-page) .bg-white,
+body:not(.login-page) .bg-gray-50 {
+  color: var(--text-primary) !important;
+}
+
+/* Títulos y números grandes */
+body:not(.login-page) h1,
+body:not(.login-page) h2,
+body:not(.login-page) h3,
+body:not(.login-page) .text-2xl,
+body:not(.login-page) .text-3xl,
+body:not(.login-page) .text-xl,
+body:not(.login-page) .text-lg {
+  color: var(--text-primary) !important;
+}
+
+/* Clases de texto personalizadas usadas en componentes */
+body:not(.login-page) .text-primary { 
+  color: var(--text-primary) !important; 
+}
+body:not(.login-page) .text-secondary { 
+  color: var(--text-secondary) !important; 
+}
+body:not(.login-page) .text-tertiary { 
+  color: var(--text-tertiary) !important; 
+}
+
+/* MODO OSCURO: Clases personalizadas con texto blanco */
+.dark body:not(.login-page) .text-primary { 
+  color: #ffffff !important; 
+}
+.dark body:not(.login-page) .text-secondary { 
+  color: #e5e7eb !important; 
+}
+.dark body:not(.login-page) .text-tertiary { 
+  color: #d1d5db !important; 
+}
+
+/* Clases de fondo personalizadas */
+body:not(.login-page) .bg-primary { 
+  background-color: var(--bg-primary) !important; 
+}
+body:not(.login-page) .bg-secondary { 
+  background-color: var(--bg-secondary) !important; 
+  border: 1px solid var(--border-color) !important;
+}
+body:not(.login-page) .bg-tertiary { 
+  background-color: var(--bg-tertiary) !important; 
+}
+
+/* Clases de border personalizadas */
+body:not(.login-page) .border-theme { 
+  border-color: var(--border-color) !important; 
+}
+
+/* Botones personalizados */
+body:not(.login-page) .btn-primary {
+  background-color: var(--color-primary) !important;
+  color: white !important;
+  border-color: var(--color-primary) !important;
+}
+
+body:not(.login-page) .btn-primary:hover {
+  background-color: var(--color-primary-dark) !important;
+  border-color: var(--color-primary-dark) !important;
+}
+
+/* Asegurar que TODOS los elementos de texto sean visibles */
+body:not(.login-page) * {
+  color: inherit;
+}
+
+body:not(.login-page) div,
+body:not(.login-page) p,
+body:not(.login-page) span {
+  color: var(--text-primary);
+}
+
+/* Asegurar números y estadísticas visibles */
+body:not(.login-page) .font-bold,
+body:not(.login-page) .font-semibold,
+body:not(.login-page) .font-medium {
+  color: var(--text-primary) !important;
+}
+
+/* Elementos específicos que podrían estar ocultos */
+body:not(.login-page) .text-sm {
+  color: var(--text-secondary) !important;
+}
+
+body:not(.login-page) .text-xs {
+  color: var(--text-accent) !important;
+}
+
+/* Sobrescribir todas las clases de texto de Tailwind */
+body:not(.login-page) .text-gray-100,
+body:not(.login-page) .text-gray-200,
+body:not(.login-page) .text-gray-300 { 
+  color: var(--text-accent) !important; 
+}
+
+/* Asegurar que main y page-content tengan el color de fondo correcto */
+body:not(.login-page) main,
+body:not(.login-page) .page-content {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+}
+
+/* MODO OSCURO: Fondo principal muy oscuro */
+.dark body:not(.login-page) main,
+.dark body:not(.login-page) .page-content {
+  background-color: var(--bg-primary) !important; /* Fondo principal muy oscuro */
+  color: #ffffff !important;
+}
+
+/* MODO OSCURO: Todo el texto en el main debe ser blanco */
+.dark body:not(.login-page) main div,
+.dark body:not(.login-page) main span,
+.dark body:not(.login-page) main p,
+.dark body:not(.login-page) main h1,
+.dark body:not(.login-page) main h2,
+.dark body:not(.login-page) main h3,
+.dark body:not(.login-page) main h4 {
+  color: #ffffff !important;
+}
+
+/* Cards específicas del dashboard con fondo y texto correctos */
+body:not(.login-page) .rounded-xl.p-6 {
+  background-color: var(--bg-secondary) !important;
+  border: 1px solid var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+
+/* MODO OSCURO: Cards oscuras con texto blanco */
+.dark body:not(.login-page) .rounded-xl.p-6 {
+  background-color: var(--bg-secondary) !important; /* Fondo oscuro de las cards */
+  border: 1px solid var(--border-color) !important;
+  color: #ffffff !important; /* Texto blanco */
+}
+
+.dark body:not(.login-page) .rounded-xl.p-6 * {
+  color: #ffffff !important; /* Todo el texto dentro de las cards blanco */
+}
+
+.dark body:not(.login-page) .rounded-xl.p-6 h1,
+.dark body:not(.login-page) .rounded-xl.p-6 h2,
+.dark body:not(.login-page) .rounded-xl.p-6 h3,
+.dark body:not(.login-page) .rounded-xl.p-6 span,
+.dark body:not(.login-page) .rounded-xl.p-6 p {
+  color: #ffffff !important;
+}
+
+/* Cards específicas del dashboard - números grandes blancos en modo oscuro */
+.dark body:not(.login-page) .text-2xl,
+.dark body:not(.login-page) .text-3xl,
+.dark body:not(.login-page) .font-bold {
+  color: #ffffff !important;
+}
+
+/* Asegurar que cards blancas tengan texto visible en modo oscuro */
+body:not(.login-page) .text-white {
+  color: #ffffff !important;
+}
+
+/* Regla de emergencia: forzar que TODO el contenido del dashboard sea visible */
+body:not(.login-page) [class*="Dashboard"],
+body:not(.login-page) [class*="dashboard"],
+body:not(.login-page) .space-y-6 > div {
+  color: var(--text-primary) !important;
+}
+
+body:not(.login-page) .space-y-6 > div * {
+  color: inherit !important;
+}
+
+/* MODO OSCURO: Dashboard con texto blanco */
+.dark body:not(.login-page) [class*="Dashboard"],
+.dark body:not(.login-page) [class*="dashboard"],
+.dark body:not(.login-page) .space-y-6 > div {
+  color: #ffffff !important;
+}
+
+.dark body:not(.login-page) .space-y-6 > div * {
+  color: #ffffff !important;
+}
+
+/* MODO OSCURO: Estadísticas con texto blanco */
+.dark body:not(.login-page) [class*="Statistics"],
+.dark body:not(.login-page) [class*="statistics"] {
+  color: #ffffff !important;
+}
+
+.dark body:not(.login-page) [class*="Statistics"] *,
+.dark body:not(.login-page) [class*="statistics"] * {
+  color: #ffffff !important;
+}
+
+/* Clases globales para fondos con mejor contraste */
+body:not(.login-page) .bg-white { 
+  background-color: var(--bg-secondary) !important; 
+  border: 1px solid var(--border-color) !important;
+}
+
+/* MODO OSCURO: Cards blancas deben ser oscuras */
+.dark body:not(.login-page) .bg-white { 
+  background-color: var(--bg-secondary) !important; 
+  border: 1px solid var(--border-color) !important;
+  color: #ffffff !important;
+}
+
+.dark body:not(.login-page) .bg-white * {
+  color: #ffffff !important;
+}
+body:not(.login-page) .bg-gray-50 { 
+  background-color: var(--bg-primary) !important; 
+}
+body:not(.login-page) .bg-gray-100 { 
+  background-color: var(--bg-tertiary) !important; 
+}
+body:not(.login-page) .bg-gray-200 { 
+  background-color: var(--bg-accent) !important; 
+}
+
+/* MODO OSCURO: Todos los fondos grises/blancos deben ser oscuros */
+.dark body:not(.login-page) .bg-gray-50 { 
+  background-color: var(--bg-secondary) !important; 
+  color: #ffffff !important;
+}
+
+.dark body:not(.login-page) .bg-gray-50 * {
+  color: #ffffff !important;
+}
+
+.dark body:not(.login-page) .bg-gray-100 { 
+  background-color: var(--bg-secondary) !important; 
+  color: #ffffff !important;
+}
+
+.dark body:not(.login-page) .bg-gray-100 * {
+  color: #ffffff !important;
+}
+
+.dark body:not(.login-page) .bg-gray-200 { 
+  background-color: var(--bg-secondary) !important; 
+  color: #ffffff !important;
+}
+
+.dark body:not(.login-page) .bg-gray-200 * {
+  color: #ffffff !important;
+}
+
+/* REGLA UNIVERSAL PARA MODO OSCURO: Todas las cards deben ser oscuras */
+.dark body:not(.login-page) div[class*="bg-"],
+.dark body:not(.login-page) div[class*="rounded"],
+.dark body:not(.login-page) .p-6,
+.dark body:not(.login-page) .p-4 {
+  background-color: var(--bg-secondary) !important;
+  color: #ffffff !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+.dark body:not(.login-page) div[class*="bg-"] *,
+.dark body:not(.login-page) div[class*="rounded"] *,
+.dark body:not(.login-page) .p-6 *,
+.dark body:not(.login-page) .p-4 * {
+  color: #ffffff !important;
+}
+
+/* Excepción para la card azul principal */
+.dark body:not(.login-page) .bg-gradient-to-br.from-gray-900 {
+  background-color: var(--color-primary) !important;
+  border: 1px solid var(--color-primary-dark) !important;
+}
+
+/* Forzar que las cards inferiores grandes también sean oscuras */
+.dark body:not(.login-page) .space-y-6 > div:nth-child(n+3) {
+  background-color: var(--bg-secondary) !important;
+  color: #ffffff !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+.dark body:not(.login-page) .space-y-6 > div:nth-child(n+3) * {
+  color: #ffffff !important;
+}
+
+/* ESPECÍFICO: Card "Total Gastos" en modo oscuro */
+.dark body:not(.login-page) .grid.grid-cols-1.md\\:grid-cols-2.lg\\:grid-cols-4 > div:nth-child(2) {
+  background-color: var(--bg-secondary) !important;
+  color: #ffffff !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+.dark body:not(.login-page) .grid.grid-cols-1.md\\:grid-cols-2.lg\\:grid-cols-4 > div:nth-child(2) * {
+  color: #ffffff !important;
+}
+
+/* ESPECÍFICO: Card "Promedio" en modo oscuro */
+.dark body:not(.login-page) .grid.grid-cols-1.md\\:grid-cols-2.lg\\:grid-cols-4 > div:nth-child(3) {
+  background-color: var(--bg-secondary) !important;
+  color: #ffffff !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+.dark body:not(.login-page) .grid.grid-cols-1.md\\:grid-cols-2.lg\\:grid-cols-4 > div:nth-child(3) * {
+  color: #ffffff !important;
+}
+
+/* ESPECÍFICO: Cuarta card del grid en modo oscuro */
+.dark body:not(.login-page) .grid.grid-cols-1.md\\:grid-cols-2.lg\\:grid-cols-4 > div:nth-child(4) {
+  background-color: var(--bg-secondary) !important;
+  color: #ffffff !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+.dark body:not(.login-page) .grid.grid-cols-1.md\\:grid-cols-2.lg\\:grid-cols-4 > div:nth-child(4) * {
+  color: #ffffff !important;
+}
+
+/* ESPECÍFICO: Todas las cards del grid principal en modo oscuro */
+.dark body:not(.login-page) .grid.gap-6 > div {
+  background-color: var(--bg-secondary) !important;
+  color: #ffffff !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+.dark body:not(.login-page) .grid.gap-6 > div * {
+  color: #ffffff !important;
+}
+
+/* ESPECÍFICO: Componente Statistics completo en modo oscuro */
+.dark body:not(.login-page) div[class*="Statistics"],
+.dark body:not(.login-page) div[class*="statistics"] {
+  background-color: var(--bg-primary) !important;
+  color: #ffffff !important;
+}
+
+.dark body:not(.login-page) div[class*="Statistics"] > *,
+.dark body:not(.login-page) div[class*="statistics"] > * {
+  color: #ffffff !important;
+}
+
+/* ESPECÍFICO: Cards dentro de Statistics en modo oscuro */
+.dark body:not(.login-page) div[class*="Statistics"] .card,
+.dark body:not(.login-page) div[class*="statistics"] .card,
+.dark body:not(.login-page) div[class*="Statistics"] .rounded-xl,
+.dark body:not(.login-page) div[class*="statistics"] .rounded-xl,
+.dark body:not(.login-page) div[class*="Statistics"] .bg-white,
+.dark body:not(.login-page) div[class*="statistics"] .bg-white {
+  background-color: var(--bg-secondary) !important;
+  color: #ffffff !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+.dark body:not(.login-page) div[class*="Statistics"] .card *,
+.dark body:not(.login-page) div[class*="statistics"] .card *,
+.dark body:not(.login-page) div[class*="Statistics"] .rounded-xl *,
+.dark body:not(.login-page) div[class*="statistics"] .rounded-xl *,
+.dark body:not(.login-page) div[class*="Statistics"] .bg-white *,
+.dark body:not(.login-page) div[class*="statistics"] .bg-white * {
+  color: #ffffff !important;
+}
+
+/* REGLA EXTREMA: Capturar todo elemento con padding que pueda ser una card */
+.dark body:not(.login-page) [class*="p-4"],
+.dark body:not(.login-page) [class*="p-6"],
+.dark body:not(.login-page) [class*="p-8"] {
+  background-color: var(--bg-secondary) !important;
+  color: #ffffff !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+.dark body:not(.login-page) [class*="p-4"] *,
+.dark body:not(.login-page) [class*="p-6"] *,
+.dark body:not(.login-page) [class*="p-8"] * {
+  color: #ffffff !important;
+}
+
+/* REGLA EXTREMA: Cualquier div con clases de rounded */
+.dark body:not(.login-page) [class*="rounded-lg"],
+.dark body:not(.login-page) [class*="rounded-xl"],
+.dark body:not(.login-page) [class*="rounded-2xl"] {
+  background-color: var(--bg-secondary) !important;
+  color: #ffffff !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+.dark body:not(.login-page) [class*="rounded-lg"] *,
+.dark body:not(.login-page) [class*="rounded-xl"] *,
+.dark body:not(.login-page) [class*="rounded-2xl"] * {
+  color: #ffffff !important;
+}
+
+/* REGLA NUCLEAR: Si nada más funciona, forzar a todos los hijos del main */
+.dark body:not(.login-page) main > div > div {
+  background-color: var(--bg-secondary) !important;
+  color: #ffffff !important;
+}
+
+.dark body:not(.login-page) main > div > div * {
+  color: #ffffff !important;
+}
+
+/* ESPECÍFICO PARA ESTADÍSTICAS: Cards superiores del grid 2x2 */
+.dark body:not(.login-page) .grid.grid-cols-2.lg\\:grid-cols-4.gap-6 > div,
+.dark body:not(.login-page) .grid.grid-cols-1.md\\:grid-cols-2.lg\\:grid-cols-4.gap-6 > div {
+  background-color: var(--bg-secondary) !important;
+  color: #ffffff !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+.dark body:not(.login-page) .grid.grid-cols-2.lg\\:grid-cols-4.gap-6 > div *,
+.dark body:not(.login-page) .grid.grid-cols-1.md\\:grid-cols-2.lg\\:grid-cols-4.gap-6 > div * {
+  color: #ffffff !important;
+}
+
+/* ESPECÍFICO: Grid de estadísticas inferior (2x1) */
+.dark body:not(.login-page) .grid.grid-cols-1.lg\\:grid-cols-2.gap-6 > div {
+  background-color: var(--bg-secondary) !important;
+  color: #ffffff !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+.dark body:not(.login-page) .grid.grid-cols-1.lg\\:grid-cols-2.gap-6 > div * {
+  color: #ffffff !important;
+}
+
+/* REGLA EXTREMA: Cualquier card blanca en estadísticas */
+.dark body:not(.login-page) .bg-white {
+  background-color: var(--bg-secondary) !important;
+  color: #ffffff !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+.dark body:not(.login-page) .bg-white * {
+  color: #ffffff !important;
+}
+
+/* REGLA NUCLEAR: Override directo para todas las cards en cualquier grid */
+.dark body:not(.login-page) div[class*="grid"] > div[class*="bg-"],
+.dark body:not(.login-page) div[class*="grid"] > div[class*="rounded"],
+.dark body:not(.login-page) div[class*="grid"] > div[class*="p-"] {
+  background-color: var(--bg-secondary) !important;
+  color: #ffffff !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+.dark body:not(.login-page) div[class*="grid"] > div[class*="bg-"] *,
+.dark body:not(.login-page) div[class*="grid"] > div[class*="rounded"] *,
+.dark body:not(.login-page) div[class*="grid"] > div[class*="p-"] * {
+  color: #ffffff !important;
+}
+
+/* Borders */
+body:not(.login-page) .border-gray-200 { border-color: var(--border-color) !important; }
+body:not(.login-page) .border-gray-300 { border-color: var(--border-color) !important; }
+
+/* Hover states */
+body:not(.login-page) .hover\\:bg-gray-50:hover { background-color: var(--bg-hover) !important; }
+body:not(.login-page) .hover\\:bg-gray-100:hover { background-color: var(--bg-hover) !important; }
+body:not(.login-page) .hover\\:text-gray-900:hover { color: var(--text-primary) !important; }
+
+/* Cards específicas con mejor contraste */
+body:not(.login-page) .card-modern {
+  background-color: var(--bg-secondary) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-primary) !important;
+  border-width: 1px !important;
+  border-style: solid !important;
+}
+
+/* Mejorar contraste de todas las cards */
+body:not(.login-page) .card,
+body:not(.login-page) .rounded-xl {
+  border: 1px solid var(--border-color) !important;
+}
+
+/* Cards específicas del Dashboard con más contraste */
+body:not(.login-page) .bg-gradient-to-br {
+  background-image: none !important;
+  background-color: var(--bg-secondary) !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+/* Card primaria (Total Gastado) - mantener color primario pero con border */
+body:not(.login-page) .bg-gradient-to-br.from-gray-900 {
+  background-color: var(--color-primary) !important;
+  border: 1px solid var(--color-primary-dark) !important;
+}
+
+/* MODO OSCURO: Card principal azul con texto blanco */
+.dark body:not(.login-page) .bg-gradient-to-br.from-gray-900 {
+  background-color: var(--color-primary) !important;
+  border: 1px solid var(--color-primary-dark) !important;
+  color: #ffffff !important;
+}
+
+.dark body:not(.login-page) .bg-gradient-to-br.from-gray-900 * {
+  color: #ffffff !important;
+}
+
+/* MODO OSCURO: Todas las cards oscuras */
+.dark body:not(.login-page) .card,
+.dark body:not(.login-page) .card-modern,
+.dark body:not(.login-page) .rounded-xl {
+  background-color: var(--bg-secondary) !important;
+  border: 1px solid var(--border-color) !important;
+  color: #ffffff !important;
+}
+
+.dark body:not(.login-page) .card *,
+.dark body:not(.login-page) .card-modern *,
+.dark body:not(.login-page) .rounded-xl * {
+  color: #ffffff !important;
+}
+
+/* Links */
+body:not(.login-page) .text-blue-600 { color: var(--color-primary) !important; }
+body:not(.login-page) .text-blue-700 { color: var(--color-primary-dark) !important; }
+body:not(.login-page) .hover\\:text-blue-700:hover { color: var(--color-primary-dark) !important; }
+
+/* Success/Warning/Error colors que deben mantenerse */
+body:not(.login-page) .text-green-400,
+body:not(.login-page) .text-green-600 { color: var(--color-success) !important; }
+body:not(.login-page) .text-red-400,
+body:not(.login-page) .text-red-600 { color: var(--color-danger) !important; }
+body:not(.login-page) .text-yellow-400,
+body:not(.login-page) .text-yellow-600 { color: var(--color-warning) !important; }
+body:not(.login-page) .text-orange-600 { color: var(--color-warning) !important; }
+
+/* Gradientes convertidos a colores sólidos en modo tema */
+body:not(.login-page) .bg-gradient-to-br {
+  background-image: none !important;
+  background-color: var(--color-primary) !important;
+}
+
+/* Shadows ajustadas por tema con más contraste */
+body:not(.login-page) .shadow-sm { 
+  box-shadow: var(--shadow-sm) !important; 
+}
+body:not(.login-page) .shadow-md { 
+  box-shadow: var(--shadow-md) !important; 
+}
+body:not(.login-page) .shadow-lg { 
+  box-shadow: var(--shadow-lg) !important; 
+}
+
+/* Sidebar con mejor contraste */
+body:not(.login-page) .sidebar-modern {
+  background-color: var(--bg-secondary) !important;
+  border-right: 1px solid var(--border-color) !important;
+}
+
+/* Elementos del dashboard con hover mejorado */
+body:not(.login-page) .hover\\:bg-gray-50:hover,
+body:not(.login-page) .hover\\:bg-gray-100:hover { 
+  background-color: var(--bg-tertiary) !important; 
+  border: 1px solid var(--border-hover) !important;
+}
