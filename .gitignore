@@ -3,8 +3,10 @@ node_modules/
 database.sqlite
 *.log
 .DS_Store
-dist/
 build/
 
 # Mantener archivos de ejemplo
 !.env.example
+
+# Incluir dist del frontend para deployment
+!front/dist/
