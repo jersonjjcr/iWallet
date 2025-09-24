@@ -9,11 +9,23 @@ npm install
 # Ir al frontend e instalar dependencias
 echo "📦 Instalando dependencias del frontend..."
 cd front
+
+# Limpiar cache y reinstalar
+echo "🧹 Limpiando cache..."
+rm -rf node_modules package-lock.json
 npm install
 
-# Compilar el frontend usando npx para asegurar que vite esté disponible
+# Verificar que vite esté instalado
+echo "🔍 Verificando instalación de Vite..."
+npm list vite
+
+# Compilar el frontend
 echo "🔨 Compilando frontend..."
-npx vite build
+NODE_OPTIONS="--max-old-space-size=4096" npx vite build
+
+# Verificar que se creó dist
+echo "✅ Verificando carpeta dist..."
+ls -la dist/
 
 # Volver al backend
 cd ..
