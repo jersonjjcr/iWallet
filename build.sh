@@ -11,9 +11,9 @@ echo "📦 Instalando dependencias del frontend..."
 cd front
 npm install
 
-# Compilar el frontend
+# Compilar el frontend usando npx para asegurar que vite esté disponible
 echo "🔨 Compilando frontend..."
-npm run build
+npx vite build
 
 # Volver al backend
 cd ..
