@@ -10,22 +10,23 @@ npm install
 echo "📦 Instalando dependencias del frontend..."
 cd front
 
-# Limpiar cache y reinstalar
-echo "🧹 Limpiando cache..."
-rm -rf node_modules package-lock.json
-npm install
+# Instalar dependencias con force para resolver conflictos
+echo "🧹 Instalando dependencias del frontend..."
+npm install --force
 
-# Verificar que vite esté instalado
+# Verificar que vite esté instalado correctamente
 echo "🔍 Verificando instalación de Vite..."
 npm list vite
+echo "🔍 Verificando ruta de vite..."
+ls -la node_modules/.bin/vite || echo "Vite no encontrado en .bin"
 
-# Compilar el frontend
+# Compilar el frontend usando la ruta completa
 echo "🔨 Compilando frontend..."
-NODE_OPTIONS="--max-old-space-size=4096" npx vite build
+./node_modules/.bin/vite build
 
 # Verificar que se creó dist
 echo "✅ Verificando carpeta dist..."
-ls -la dist/
+ls -la dist/ || echo "Error: dist no fue creada"
 
 # Volver al backend
 cd ..
